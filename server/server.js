@@ -27,7 +27,7 @@ app.use(cors());
 
 /* API ROUTES */
 app.use("/kpi", kpiRoutes);
-app.use("/products", productRoutes)
+app.use("/product", productRoutes)
 
 /* MONGOOSE CONFIGURATION */
 const PORT = process.env.SERVER_PORT || 9000;
