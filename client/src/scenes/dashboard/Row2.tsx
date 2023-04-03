@@ -105,11 +105,8 @@ const Row2 = (props: Props) => {
           title="Campaigns and Targets"
           sideText="+4%"
         />
-        <FlexBetween mt="0.25rem" gap="1.5rem" pr="1rem">
-        <BoxHeader
-          title="Campaigns and Targets"
-          sideText="+4%"
-        />
+        <FlexBetween mt="0.25rem" gap="1.5rem" p="0 1rem">
+
           <PieChart 
             width={110} 
             height={100}
