@@ -7,11 +7,12 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 import kpiRoutes from "./routes/kpi.js";
-import productRoutes from "./models/product.js"
-// import KPI from "./models/KPI.js";
-// import Products from ".models/Product.js"
+import productRoutes from "./routes/product.js";
+import KPI from "./models/KPI.js";
+import Product from "./models/Product.js";
+import Transaction from "./models/Transaction.js";
 
-// import { kpis } from "./data/data.js"
+import { kpis, products, transactions } from "./data/data.js";
 
 /* SERVER CONFIGURATION */
 dotenv.config();
@@ -40,7 +41,10 @@ mongoose
   
   // RUN ONLY ONCE
   // await mongoose.connection.db.dropDatabase();
-  // KPI.insertMany(kpis)
+  // KPI.insertMany(kpis);
+  // Product.insertMany(products);
+  // Transaction.insertMany(transactions);
+
 
   })
   .catch((error) => console.log(`${error} did not connect`));

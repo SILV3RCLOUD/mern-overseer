@@ -1,23 +1,27 @@
 import mongoose from "mongoose";
+import { loadType } from "mongoose-currency";
 
 const Schema = mongoose.Schema;
+loadType(mongoose);
 
 const ProductSchema = new Schema({
-   buyer: {
-        type: String,
-    },
-    amount: {
-        type: mongoose.Types.Currency,
-        currency: "PHP",
-        get: (v) => v/100
-    },
-    productIds: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product",
-    },
-  },
-  { timestamps: true, toJSON: {getters: true}}
-)
+    price: {
+         type: mongoose.Types.Currency,
+         currency: "PHP",
+         get: (v) => v/100
+     },
+     expense: {
+         type: mongoose.Types.Currency,
+         currency: "PHP",
+         get: (v) => v/100
+     },
+     transaction: {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "Transaction",
+     },
+   },
+   { timestamps: true, toJSON: {getters: true}}
+ )
 
 const Product = mongoose.model("Product", ProductSchema);
 
