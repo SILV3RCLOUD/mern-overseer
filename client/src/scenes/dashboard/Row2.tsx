@@ -182,6 +182,7 @@ const Row2 = (props: Props) => {
               type="number"
               dataKey="expense" 
               name="expense"
+              style={{fontSize: "10px"}}
             />
             <ZAxis type="number" range={[20]} />
             <Tooltip formatter={(v) => `PHP ${v}`}/>
