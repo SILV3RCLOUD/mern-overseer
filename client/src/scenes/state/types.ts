@@ -9,8 +9,8 @@ export interface Month {
   month: string;
   revenue: number;
   expenses: number;
-  nonOperationExpenses: number;
-  operationExpenses: number;
+  nonOperationalExpenses: number;
+  operationalExpenses: number;
 }
 
 export interface Day {
