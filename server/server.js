@@ -5,9 +5,13 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
+
 import kpiRoutes from "./routes/kpi.js";
-import KPI from "./models/KPI.js";
-import { kpis } from "./data/data.js"
+import productRoutes from "./models/product.js"
+// import KPI from "./models/KPI.js";
+// import Products from ".models/Product.js"
+
+// import { kpis } from "./data/data.js"
 
 /* SERVER CONFIGURATION */
 dotenv.config();
@@ -22,6 +26,7 @@ app.use(cors());
 
 /* API ROUTES */
 app.use("/kpi", kpiRoutes);
+app.use("/products", productRoutes)
 
 /* MONGOOSE CONFIGURATION */
 const PORT = process.env.SERVER_PORT || 9000;
