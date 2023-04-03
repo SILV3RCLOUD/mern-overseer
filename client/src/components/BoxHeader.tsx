@@ -6,9 +6,9 @@ import FlexBetween from './FlexBetween'
 
 type Props = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   icon?: React.ReactNode;
-  sideText: string;
+  sideText?: string;
 }
 
 const BoxHeader = ({ icon, title, subtitle, sideText }: Props) => {
