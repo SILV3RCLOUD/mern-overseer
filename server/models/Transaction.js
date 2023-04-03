@@ -6,20 +6,20 @@ loadType(mongoose);
 
 const TransactionSchema = new Schema({
     buyer: {
-         type: String,
-     },
-     amount: {
-         type: mongoose.Types.Currency,
-         currency: "PHP",
-         get: (v) => v/100
-     },
-     productIds: {
-         type: mongoose.Schema.Types.ObjectId,
-         ref: "Product",
-     },
-   },
-   { timestamps: true, toJSON: {getters: true}}
- )
+        type: String,
+    },
+    amount: {
+        type: mongoose.Types.Currency,
+        currency: "PHP",
+        get: (v) => v/100
+    },
+    productIds: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: "Product",
+    },
+  },
+  { timestamps: true, toJSON: {getters: true}}
+)
 
 const Transaction = mongoose.model("Transaction", TransactionSchema);
 

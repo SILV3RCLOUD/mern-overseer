@@ -8,6 +8,7 @@ import morgan from "morgan";
 
 import kpiRoutes from "./routes/kpi.js";
 import productRoutes from "./routes/product.js";
+import transactionRoutes from "./routes/transaction.js";
 import KPI from "./models/KPI.js";
 import Product from "./models/Product.js";
 import Transaction from "./models/Transaction.js";
@@ -27,7 +28,8 @@ app.use(cors());
 
 /* API ROUTES */
 app.use("/kpi", kpiRoutes);
-app.use("/product", productRoutes)
+app.use("/product", productRoutes);
+app.use("/transaction", transactionRoutes);
 
 /* MONGOOSE CONFIGURATION */
 const PORT = process.env.SERVER_PORT || 9000;
@@ -43,7 +45,7 @@ mongoose
   // await mongoose.connection.db.dropDatabase();
   // KPI.insertMany(kpis);
   // Product.insertMany(products);
-  // Transaction.insertMany(transactions);
+  //Transaction.insertMany(transactions);
 
 
   })
