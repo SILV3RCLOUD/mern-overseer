@@ -1,6 +1,6 @@
 import DashboardBox from '@/components/DashboardBox'
 import React, { useMemo } from 'react'
-import { useGetKpisQuery, useGetProductsQuery } from '../state/api';
+import { useGetKpisQuery, useGetProductsQuery } from '../../state/api';
 import {
   ResponsiveContainer,
   CartesianGrid,

@@ -1,6 +1,6 @@
 import DashboardBox from '@/components/DashboardBox'
 import React, { useMemo } from 'react'
-import { useGetKpisQuery } from '../state/api';
+import { useGetKpisQuery } from '../../state/api';
 import {
   ResponsiveContainer,
   AreaChart,
