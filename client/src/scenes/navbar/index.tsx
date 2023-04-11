@@ -27,7 +27,7 @@ const Navbar = (props: Props) => {
           </Link>
         </Box>
         <Box sx={{ "&hover": {color: palette.primary[100]}}}>
-          <Link to="/" onClick={() => setSelected('predictions')}
+          <Link to="/prediction" onClick={() => setSelected('prediction')}
           style={{
             color: selected ==="predictions" ? "inherit" : palette.grey[700],
             textDecoration: "inherit"
